@@ -1,0 +1,86 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+background-image: url('https://img.freepik.com/premium-photo/father-daughter-love-fathers-love_1029679-132003.jpg?w=826');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+object-fit: cover;
+position: relative;
+}
+.App::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: -1; 
+}
+
+
+.show-button {
+  padding: 15px 25px;
+  font-size: 18px;
+  background-color: hsl(241.43deg 44.68% 18.43%);
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.show-button:hover {
+  background-color: #e91e63c2;
+}
+
+.quote-container {
+  background-color: #e91e63c2;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  font-size: 1.5rem;
+  text-align: center;
+  animation: slideIn 1s ease-out forwards, fadeIn 2s ease-out forwards;
+}
+
+.quote-text {
+  font-weight: bold;
+  font-style: italic;
+  margin: 0;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.right-side {
+  text-align: right;
+}
+
+.name {
+  font-size: 2rem;
+  font-style: italic;
+  color: #fff;
+  animation: fadeIn 2s ease-in-out;
+}
